@@ -11,13 +11,14 @@ ARG PORT=9001
 # ==================================================>
 # ==> Do not change the code below this line
 ARG ARCH=arm32v7
-ARG DISTRO=ente
+ARG DISTRO=daffy
 ARG BASE_TAG=${DISTRO}-${ARCH}
 ARG BASE_IMAGE=dt-ros-commons
 ARG LAUNCHER=default
 
 # define base image
-FROM duckietown/${BASE_IMAGE}:${BASE_TAG}
+ARG DOCKER_REGISTRY=docker.io
+FROM ${DOCKER_REGISTRY}/${BASE_IMAGE}:${BASE_TAG} as BASE
 
 # recall all arguments
 ARG PORT
@@ -56,6 +57,9 @@ RUN dt-apt-install ${REPO_PATH}/dependencies-apt.txt
 
 # install python3 dependencies
 COPY ./dependencies-py3.txt "${REPO_PATH}/"
+
+ARG PIP_INDEX_URL="https://pypi.org/simple"
+ENV PIP_INDEX_URL=${PIP_INDEX_URL}
 RUN pip3 install -r ${REPO_PATH}/dependencies-py3.txt
 
 # copy the source code
