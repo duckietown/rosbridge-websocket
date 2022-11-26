@@ -1,7 +1,7 @@
 # parameters
 ARG REPO_NAME="dt-rosbridge-websocket"
 ARG DESCRIPTION="WebSocket bridge from the RosBridge suite (http://wiki.ros.org/rosbridge_suite)"
-ARG MAINTAINER="Andrea F. Daniele (afdaniele@ttic.edu)"
+ARG MAINTAINER="Andrea F. Daniele (afdaniele@duckietown.com)"
 # pick an icon from: https://fontawesome.com/v4.7.0/icons/
 ARG ICON="exchange"
 
