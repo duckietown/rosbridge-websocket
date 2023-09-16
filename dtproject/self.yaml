@@ -1,0 +1,8 @@
+name: "dt-rosbridge-websocket"
+maintainer:
+    name: "Andrea F. Daniele"
+    email: "afdaniele@duckietown.com"
+description: "WebSocket bridge from the RosBridge suite (http://wiki.ros.org/rosbridge_suite)"
+version: 4.0.2
+# pick an icon from: https://fontawesome.com/v4.7.0/icons/
+icon: exchange
