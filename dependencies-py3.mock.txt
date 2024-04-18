@@ -1,0 +1,6 @@
+# LIST YOUR MOCKED PYTHON3 PACKAGES HERE
+# NOTE: Mocked packages are not installed, but are available in the environment. Usually installed via APT.
+
+rosapi==0.11.17
+rosbridge-library==0.11.17
+rosbridge-server==0.11.17
