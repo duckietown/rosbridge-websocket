@@ -5,6 +5,8 @@ ARG PROJECT_MAINTAINER
 # pick an icon from: https://fontawesome.com/v4.7.0/icons/
 ARG PROJECT_ICON="cube"
 ARG PROJECT_FORMAT_VERSION
+# - this project
+ARG PORT=9001
 
 # ==================================================>
 # ==> Do not change the code below this line
@@ -19,8 +21,6 @@ ARG LAUNCHER=default
 # define base image
 FROM ${DOCKER_REGISTRY}/${BASE_ORGANIZATION}/${BASE_REPOSITORY}:${BASE_TAG} as base
 
-# arguments
-ARG PORT=9001
 # recall all arguments
 ARG ARCH
 ARG DISTRO
@@ -39,6 +39,8 @@ ARG TARGETPLATFORM
 ARG TARGETOS
 ARG TARGETARCH
 ARG TARGETVARIANT
+# - this project
+ARG PORT
 
 # check build arguments
 RUN dt-args-check \
